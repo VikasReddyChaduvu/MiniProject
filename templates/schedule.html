@@ -1,0 +1,6 @@
+<h2>Schedule</h2>
+<ul>
+{% for a in allocations %}
+<li>{{ a.exam.subject }} ({{ a.exam.date }} {{ a.exam.time }}) → Room {{ a.room.room_number }}</li>
+{% endfor %}
+</ul>

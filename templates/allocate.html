@@ -1,0 +1,16 @@
+<h2>Allocate Room to Exam</h2>
+<form method="post">
+    Exam:
+    <select name="exam_id">
+        {% for exam in exams %}
+        <option value="{{ exam.id }}">{{ exam.subject }} - {{ exam.date }}</option>
+        {% endfor %}
+    </select><br>
+    Room:
+    <select name="room_id">
+        {% for room in rooms %}
+        <option value="{{ room.id }}">{{ room.room_number }}</option>
+        {% endfor %}
+    </select><br>
+    <input type="submit">
+</form>
